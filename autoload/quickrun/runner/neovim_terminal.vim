@@ -1,5 +1,5 @@
 " quickrun: runner/neovim_terminal: Runs by terminal feature.
-" Version: 0.1.0
+" Version: 0.1.1
 " Maintainer: Shusui MOYATANI <syusui.s|at|gmail.com>
 " License: zlib License
 " Original Author: thinca (https://github.com/thinca)
@@ -19,7 +19,7 @@ let s:runner = {
 
 function! s:runner.validate() abort
   if !has('nvim')
-    throw 'Needs +terminal feature.'
+    throw 'Needs +nvim feature.'
   endif
   if !s:is_win && !executable('sh')
     throw 'Needs "sh" on other than MS Windows.'
